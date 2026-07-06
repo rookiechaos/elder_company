@@ -1,0 +1,51 @@
+{
+  "name": "Elder Company - 照护协同平台",
+  "short_name": "Elder Company",
+  "description": "帮助看护者与老人共同开发有意义的活动，促进深度沟通与协作",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf9f7",
+  "theme_color": "#f5e6e8",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["health", "lifestyle", "productivity"],
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "智能翻译",
+      "short_name": "翻译",
+      "description": "快速访问翻译功能",
+      "url": "/?page=translation",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "活动管理",
+      "short_name": "活动",
+      "description": "查看和管理活动",
+      "url": "/?page=activities",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "客户管理",
+      "short_name": "客户",
+      "description": "管理客户信息",
+      "url": "/?page=customers",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [],
+  "prefer_related_applications": false
+}

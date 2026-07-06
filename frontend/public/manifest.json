@@ -1,0 +1,51 @@
+{
+  "name": "Elder Company - Care Collaboration Platform",
+  "short_name": "Elder Company",
+  "description": "Helps caregivers and elders co-create meaningful activities and communicate effectively",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf9f7",
+  "theme_color": "#f5e6e8",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["health", "lifestyle", "productivity"],
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Translation",
+      "short_name": "Translate",
+      "description": "Open translation",
+      "url": "/?page=translation",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Activities",
+      "short_name": "Activities",
+      "description": "View and manage activities",
+      "url": "/?page=activities",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Customers",
+      "short_name": "Customers",
+      "description": "Manage customer profiles",
+      "url": "/?page=customers",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [],
+  "prefer_related_applications": false
+}

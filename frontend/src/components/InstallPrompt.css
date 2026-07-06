@@ -1,0 +1,146 @@
+.install-prompt {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(245, 230, 232, 0.5);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.install-prompt-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.install-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f5e6e8 0%, #e8b4b8 100%);
+  color: white;
+  flex-shrink: 0;
+}
+
+.install-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.install-text strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #4a4a4a;
+  margin-bottom: 0.25rem;
+}
+
+.install-text p {
+  font-size: 0.85rem;
+  color: #7a7a7a;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.install-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.install-button {
+  padding: 0.625rem 1.25rem;
+  background: linear-gradient(135deg, #f5e6e8 0%, #e8b4b8 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.install-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(232, 180, 184, 0.4);
+}
+
+.install-button:active {
+  transform: translateY(0);
+}
+
+.dismiss-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  border-radius: 8px;
+  color: #6b6b6b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.dismiss-button:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #4a4a4a;
+}
+
+@media (max-width: 480px) {
+  .install-prompt {
+    padding: 0.875rem;
+  }
+
+  .install-prompt-content {
+    gap: 0.75rem;
+  }
+
+  .install-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .install-text strong {
+    font-size: 0.9rem;
+  }
+
+  .install-text p {
+    font-size: 0.8rem;
+  }
+
+  .install-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .dismiss-button {
+    width: 32px;
+    height: 32px;
+  }
+}

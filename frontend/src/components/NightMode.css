@@ -1,0 +1,271 @@
+.night-mode-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.night-mode-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color, #e0e0e0);
+}
+
+.night-mode-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-primary, #333);
+}
+
+.active-badge {
+  margin-left: auto;
+  padding: 0.25rem 0.75rem;
+  background: #4caf50;
+  color: white;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.night-mode-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.setting-group {
+  background: var(--card-bg, #fff);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.setting-group-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1rem 0;
+  font-size: 1.125rem;
+  color: var(--text-primary, #333);
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+}
+
+.setting-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-primary, #333);
+}
+
+.toggle-button {
+  width: 48px;
+  height: 28px;
+  border-radius: 14px;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.toggle-button.active {
+  background: #4caf50;
+}
+
+.toggle-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.time-settings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.time-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.time-input-group label {
+  font-size: 0.875rem;
+  color: var(--text-secondary, #666);
+}
+
+.time-input-group input {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--input-bg, #fff);
+  color: var(--text-primary, #333);
+}
+
+.brightness-options,
+.color-scheme-options,
+.font-size-options,
+.sound-type-options {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.brightness-option,
+.color-scheme-option,
+.font-size-option,
+.sound-type-option {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
+  background: var(--button-bg, #fff);
+  color: var(--text-primary, #333);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+}
+
+.brightness-option:hover,
+.color-scheme-option:hover,
+.font-size-option:hover,
+.sound-type-option:hover {
+  border-color: #4caf50;
+  background: #f1f8f4;
+}
+
+.brightness-option.active,
+.color-scheme-option.active,
+.font-size-option.active,
+.sound-type-option.active {
+  background: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+.volume-control {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.volume-control label {
+  font-size: 0.875rem;
+  color: var(--text-secondary, #666);
+}
+
+.volume-control input[type="range"] {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--border-color, #e0e0e0);
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.volume-control input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+.volume-control input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #4caf50;
+  cursor: pointer;
+  border: none;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary, #666);
+}
+
+/* 夜间模式全局样式 */
+:root.night-mode-active {
+  --night-brightness: 0.3;
+  filter: brightness(var(--night-brightness));
+}
+
+:root.night-mode-dark {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --border-color: #404040;
+  --card-bg: #2d2d2d;
+  --input-bg: #1a1a1a;
+  --button-bg: #404040;
+}
+
+:root.night-mode-dim {
+  --bg-primary: #2a2a2a;
+  --bg-secondary: #3a3a3a;
+  --text-primary: #d0d0d0;
+  --text-secondary: #a0a0a0;
+  --border-color: #505050;
+  --card-bg: #3a3a3a;
+  --input-bg: #2a2a2a;
+  --button-bg: #505050;
+}
+
+:root.night-mode-large-font {
+  font-size: 1.125rem;
+}
+
+:root.night-mode-large-font * {
+  font-size: 1.125em;
+}
+
+:root.night-mode-extra-large-font {
+  font-size: 1.25rem;
+}
+
+:root.night-mode-extra-large-font * {
+  font-size: 1.25em;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .night-mode-container {
+    padding: 1rem;
+  }
+
+  .time-settings {
+    grid-template-columns: 1fr;
+  }
+
+  .brightness-options,
+  .color-scheme-options,
+  .font-size-options,
+  .sound-type-options {
+    flex-direction: column;
+  }
+
+  .brightness-option,
+  .color-scheme-option,
+  .font-size-option,
+  .sound-type-option {
+    width: 100%;
+  }
+}
