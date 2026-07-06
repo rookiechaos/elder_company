@@ -1,0 +1,31 @@
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-dotenv==1.0.0
+openai>=1.3.0
+anthropic>=0.18.1
+google-generativeai>=0.3.2
+pydantic==2.5.0
+pydantic-settings>=2.0.0
+python-multipart==0.0.6
+httpx==0.25.2
+requests>=2.31.0
+sqlalchemy==2.0.23
+bcrypt>=4.0.1
+PyJWT>=2.8.0
+python-jose[cryptography]>=3.3.0
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+# Embedding and notifications
+openai>=1.0.0  # For embeddings (text-embedding-3-small)
+requests>=2.31.0  # For FCM push notifications
+twilio>=8.0.0  # For SMS notifications
+black>=23.0.0
+isort>=5.12.0
+mypy>=1.5.0
+ruff>=0.1.0
+slowapi>=0.1.9
+redis>=5.0.0 # Added for distributed rate limiting
+psutil>=5.9.0 # System resource monitoring
+Pillow>=10.0.0 # Added for image optimization
+aiohttp>=3.9.0 # Added for stress testing
